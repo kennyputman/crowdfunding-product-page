@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "./App.css";
+import { BackProjectModal } from "./components/BackProjectModal";
 
 function App() {
   const [backed, setBacked] = useState(89914);
   const [backers, setBackers] = useState(5007);
+  const [pledgeAmount, setPledgeAmount] = useState(0);
 
   const backedHandler = () => {
     setBacked(backed + 120);
@@ -31,6 +32,7 @@ function App() {
         <p>{backers} total backers</p>
         <p>56 days left</p>
       </section>
+      <BackProjectModal pledgeAmount={pledgeAmount}></BackProjectModal>
     </div>
   );
 }
