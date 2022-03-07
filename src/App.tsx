@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [backed, setBacked] = useState(89914);
+  const [backers, setBackers] = useState(5007);
+
+  const backedHandler = () => {
+    setBacked(backed + 120);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="">
+        <h1>Mastercraft Bamboo Monitor Riser</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          A beautiful &amp; handcrafted monitor stand to reduce neck and eye
+          strain.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={backedHandler}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          Learn React
-        </a>
+          Back this project
+        </button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Bookmark
+        </button>
       </header>
+      <section>
+        <p>${backed} of $100,000 backed</p>
+        <p>{backers} total backers</p>
+        <p>56 days left</p>
+      </section>
     </div>
   );
 }
