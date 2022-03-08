@@ -1,14 +1,17 @@
 import React, { useState } from "react";
+import About from "./components/About";
 import { BackProjectModal } from "./components/BackProjectModal";
+import data from "./data/data";
 
 function App() {
-  const [backed, setBacked] = useState(89914);
-  const [backers, setBackers] = useState(5007);
+  const [backed, setBacked] = useState(data.backed);
+  const [backers, setBackers] = useState(data.backers);
   const [pledgeAmount, setPledgeAmount] = useState(0);
 
   const backedHandler = () => {
     setBacked(backed + 120);
   };
+
   return (
     <div className="App">
       <header className="">
@@ -28,11 +31,8 @@ function App() {
         </button>
       </header>
       <section>
-        <p>${backed} of $100,000 backed</p>
-        <p>{backers} total backers</p>
-        <p>56 days left</p>
+        <About about={data.about} pledges={data.pledges}></About>
       </section>
-      <BackProjectModal pledgeAmount={pledgeAmount}></BackProjectModal>
     </div>
   );
 }
