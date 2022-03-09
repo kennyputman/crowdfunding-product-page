@@ -1,18 +1,13 @@
 import React from "react";
+import { Pledge } from "../types/PropTypes";
 import { PledgeCard } from "./PledgeCard";
 
-type DataProps = {
+type AboutProps = {
   about: string[];
-  pledges: {
-    id: number;
-    name: string;
-    minPledgeAmount: number;
-    description: string;
-    left: number;
-  }[];
+  pledges: Pledge[];
 };
 
-const About = (props: DataProps) => {
+const About = (props: AboutProps) => {
   return (
     <div>
       <h2>About this project</h2>
@@ -21,13 +16,7 @@ const About = (props: DataProps) => {
       })}
 
       {props.pledges.map((pledge) => (
-        <PledgeCard
-          key={pledge.id}
-          name={pledge.name}
-          minPledgeAmount={pledge.minPledgeAmount}
-          description={pledge.description}
-          left={pledge.left}
-        ></PledgeCard>
+        <PledgeCard pledge={pledge}></PledgeCard>
       ))}
     </div>
   );

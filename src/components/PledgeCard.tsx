@@ -1,20 +1,19 @@
 import React from "react";
+import { Pledge } from "../types/PropTypes";
 
-type pledgePropType = {
-  name: string;
-  minPledgeAmount: number;
-  description: string;
-  left: number;
+type PledgeCardProps = {
+  pledge: Pledge;
 };
 
-export const PledgeCard = (props: pledgePropType) => {
+export const PledgeCard = (props: PledgeCardProps) => {
+  console.log(props);
   return (
     <div>
-      <h3>{props.name}</h3>
-      <p>Pledge ${props.minPledgeAmount}</p>
-      <p>{props.description}</p>
+      <h3>{props.pledge.name}</h3>
+      <p>Pledge ${props.pledge.minPledgeAmount}</p>
+      <p>{props.pledge.description}</p>
       <p>
-        {props.left}
+        {props.pledge.left}
         <span>left</span>
       </p>
       <button>Select Reward</button>
