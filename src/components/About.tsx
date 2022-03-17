@@ -9,10 +9,14 @@ type AboutProps = {
 
 const About = (props: AboutProps) => {
   return (
-    <section className="flex flex-row max-w-3xl top-300 absolute">
-      <h2>About this project</h2>
+    <section className="max-w-3xl bg-white rounded-md p-12 mb-32">
+      <h2 className="pb-4">About this project</h2>
       {props.about.map((item, index) => {
-        return <h1 key={index}>{item}</h1>;
+        return (
+          <p className="pb-4" key={index}>
+            {item}
+          </p>
+        );
       })}
 
       {props.pledges.map((pledge) => (

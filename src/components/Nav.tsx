@@ -2,7 +2,10 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <header className="bg-[url('./assets/images/image-hero-desktop.jpg')] bg-no-repeat bg-cover bg-center flex justify-between min-h-hero text-white w-full">
+    <header
+      className="flex justify-between  text-white w-full
+    z-10"
+    >
       <div className="pt-12 pl-40">
         <h1 className="text-xl font-medium">crowdfund</h1>
       </div>

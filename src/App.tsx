@@ -15,9 +15,10 @@ function App() {
   };
 
   return (
-    <div className="App font-commissioner flex flex-col items-center relative bg-slate-50 h-screen">
+    <div className="App font-commissioner flex flex-col items-center bg-background-white min-h-screen relative">
+      <div className="bg-[url('./assets/images/image-hero-desktop.jpg')] bg-no-repeat bg-cover bg-center min-h-hero w-full absolute top-0 z-0"></div>
       <Nav></Nav>
-      <div className="flex flex-col max-w-3xl top-80 absolute gap-y-6">
+      <div className="flex flex-col max-w-3xl gap-y-6 z-10 mt-56">
         <ProductDescription
           title={data.title}
           pitch={data.pitch}
@@ -28,7 +29,7 @@ function App() {
           daysLeft={data.daysLeft}
           goal={data.goal}
         ></BackingInfo>
-        {/* <About about={data.about} pledges={data.pledges}></About> */}
+        <About about={data.about} pledges={data.pledges}></About>
       </div>
     </div>
   );

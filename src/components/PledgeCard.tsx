@@ -8,15 +8,23 @@ type PledgeCardProps = {
 export const PledgeCard = (props: PledgeCardProps) => {
   console.log(props);
   return (
-    <div>
-      <h3>{props.pledge.name}</h3>
-      <p>Pledge ${props.pledge.minPledgeAmount}</p>
-      <p>{props.pledge.description}</p>
-      <p>
-        {props.pledge.left}
-        <span>left</span>
-      </p>
-      <button>Select Reward</button>
-    </div>
+    <section className="border-solid border border-light-gray px-8 py-9 rounded-md mb-6 ">
+      <div className="flex flex-row justify-between pb-6">
+        <h3 className="font-bold">{props.pledge.name}</h3>
+        <p className="text-moderate-cyan font-medium">
+          Pledge ${props.pledge.minPledgeAmount} or more
+        </p>
+      </div>
+      <p className="pb-6 text-dark-gray">{props.pledge.description}</p>
+      <div className="flex flex-row justify-between">
+        <p className="font-bold text-3xl">
+          {props.pledge.left}
+          <span className="font-normal text-sm pl-2 text-dark-gray">left</span>
+        </p>
+        <button className="bg-moderate-cyan hover:bg-dark-cyan text-white font-bold py-4 px-8 rounded-full">
+          Select Reward
+        </button>
+      </div>
+    </section>
   );
 };

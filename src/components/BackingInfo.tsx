@@ -11,7 +11,7 @@ const BackingInfo = (props: BackingProps) => {
   const percentBacked = (props.backed / props.goal) * 100;
 
   return (
-    <section className="flex flex-col max-w-3xlbg-white rounded-md p-12">
+    <section className="flex flex-col max-w-3xl bg-white rounded-md p-12">
       <div className="flex flex-row justify-around text-center mb-9">
         <div className="border-r-2 flex-1">
           <h3>${props.backed}</h3>
@@ -26,9 +26,9 @@ const BackingInfo = (props: BackingProps) => {
           <p>days left</p>
         </div>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div className="w-full bg-light-gray rounded-full h-2.5 ">
         <div
-          className="bg-gray-600 h-2.5 rounded-full dark:bg-gray-300"
+          className="bg-moderate-cyan h-2.5 rounded-full "
           style={{ width: `${percentBacked}%` }}
         ></div>
       </div>
