@@ -3,7 +3,7 @@ import React from "react";
 const Nav = () => {
   return (
     <header
-      className="flex justify-between  text-white w-full
+      className="flex justify-between text-white w-full
     z-10"
     >
       <div className="pt-12 pl-40">
