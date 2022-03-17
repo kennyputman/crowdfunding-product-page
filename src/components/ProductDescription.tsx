@@ -7,7 +7,7 @@ type ProductDescriptionProps = {
 
 const ProductDescription = (props: ProductDescriptionProps) => {
   return (
-    <section className=" max-w-3xl top-80 max-w-md absolute bg-white rounded-md flex flex-col items-center text-center px-12 pb-12 pt-14">
+    <section className=" bg-white rounded-md flex flex-col items-center text-center px-12 pb-12 pt-14">
       <h1 className="text-3xl font-bold pb-4">{props.title}</h1>
       <p className="pb-10">{props.pitch}</p>
       <div className="flex flex-row justify-between w-full">

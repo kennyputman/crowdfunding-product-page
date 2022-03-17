@@ -9,7 +9,7 @@ type AboutProps = {
 
 const About = (props: AboutProps) => {
   return (
-    <section>
+    <section className="flex flex-row max-w-3xl top-300 absolute">
       <h2>About this project</h2>
       {props.about.map((item, index) => {
         return <h1 key={index}>{item}</h1>;

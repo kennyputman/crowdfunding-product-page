@@ -5,6 +5,9 @@ module.exports = {
       minHeight: {
         hero: "400px",
       },
+      spacing: {
+        backing: "900px",
+      },
       fontFamily: {
         commissioner: ["Commissioner", "sans-serif"],
       },

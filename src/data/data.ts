@@ -1,4 +1,5 @@
 const data = {
+  goal: 100000,
   backed: 89914,
   backers: 5007,
   daysLeft: 56,
