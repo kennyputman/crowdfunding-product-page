@@ -6,7 +6,6 @@ type PledgeCardProps = {
 };
 
 export const PledgeCard = (props: PledgeCardProps) => {
-  console.log(props);
   return (
     <section className="border-solid border border-light-gray px-8 py-9 rounded-md mb-6 ">
       <div className="flex flex-row justify-between pb-6">

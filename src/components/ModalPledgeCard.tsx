@@ -6,15 +6,19 @@ type PledgeCardProps = {
 };
 
 export const ModalPledgeCard = (props: PledgeCardProps) => {
-  console.log(props);
+  const filled = props.pledge.left === 0 ? { opacity: 0.4 } : {};
+  console.log(filled);
   return (
-    <section className="border-solid border border-light-gray px-8 py-9 rounded-md mb-6 ">
+    <section
+      className="border-solid border border-light-gray px-8 py-9 rounded-md mb-6 "
+      style={filled}
+    >
       <div className="flex flex-row justify-between pb-6">
-        <div>
+        <div className="flex gap-4">
           <h3 className="font-bold">{props.pledge.name}</h3>
-          <span className="text-moderate-cyan font-medium">
-            spanledge ${props.pledge.minPledgeAmount} or more
-          </span>
+          <p className="text-moderate-cyan font-medium">
+            Pledge ${props.pledge.minPledgeAmount} or more
+          </p>
         </div>
         <p className="font-bold text-3xl">
           {props.pledge.left}
