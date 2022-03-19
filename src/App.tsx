@@ -10,12 +10,13 @@ function App() {
   const [backed, setBacked] = useState(data.backed);
   const [backers, setBackers] = useState(data.backers);
   const [pledgeAmount, setPledgeAmount] = useState(0);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="App font-commissioner flex flex-col items-center bg-background-white min-h-screen relative">
       <div className="bg-[url('./assets/images/image-hero-desktop.jpg')] bg-no-repeat bg-cover bg-center min-h-hero w-full absolute top-0 z-0"></div>
       <BackProjectModal
+        showModal={showModal}
         pledgeAmount={pledgeAmount}
         title={data.title}
         pledges={data.pledges}

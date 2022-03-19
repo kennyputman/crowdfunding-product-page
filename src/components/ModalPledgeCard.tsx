@@ -7,7 +7,6 @@ type PledgeCardProps = {
 
 export const ModalPledgeCard = (props: PledgeCardProps) => {
   const filled = props.pledge.left === 0 ? { opacity: 0.4 } : {};
-  console.log(filled);
   return (
     <section
       className="border-solid border border-light-gray px-8 py-9 rounded-md mb-6 "
