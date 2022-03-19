@@ -8,6 +8,7 @@ module.exports = {
         "dark-gray": "hsl(0,0%,48%)",
         "light-gray": "#B1B1B1",
         "background-white": "#F2F2F2",
+        "light-overlay": "rgba(0, 0, 0, 0.4)",
       },
       minHeight: {
         hero: "400px",
