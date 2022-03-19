@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-base {
+    @apply text-white font-bold py-4 px-8 rounded-full;
+  }
+}

@@ -11,12 +11,10 @@ const ProductDescription = (props: ProductDescriptionProps) => {
       <h1 className="text-3xl font-bold pb-4">{props.title}</h1>
       <p className="pb-10">{props.pitch}</p>
       <div className="flex flex-row justify-between w-full">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
+        <button className="bg-moderate-cyan hover:bg-dark-cyan btn-base">
           Back this project
         </button>
-        <button className=" bg-gray-400  text-white font-bold py-2 px-6 rounded-full">
-          Bookmark
-        </button>
+        <button className=" bg-gray-400 btn-base">Bookmark</button>
       </div>
     </section>
   );

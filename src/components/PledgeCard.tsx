@@ -21,7 +21,7 @@ export const PledgeCard = (props: PledgeCardProps) => {
           {props.pledge.left}
           <span className="font-normal text-sm pl-2 text-dark-gray">left</span>
         </p>
-        <button className="bg-moderate-cyan hover:bg-dark-cyan text-white font-bold py-4 px-8 rounded-full">
+        <button className="bg-moderate-cyan hover:bg-dark-cyan btn-base">
           Select Reward
         </button>
       </div>
