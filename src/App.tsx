@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import About from "./components/About";
 import BackingInfo from "./components/BackingInfo";
-import { BackProjectModal } from "./components/BackProjectModal";
+import BackProjectModal from "./modal/BackProjectModal";
 import Nav from "./components/Nav";
 import ProductDescription from "./components/ProductDescription";
 import data from "./data/data";
+import useModal from "./modal/useModal";
 
 function App() {
   const [backed, setBacked] = useState(data.backed);
   const [backers, setBackers] = useState(data.backers);
   const [pledgeAmount, setPledgeAmount] = useState(0);
-  const [showModal, setShowModal] = useState(false);
+  const { showModal, toggle } = useModal();
 
   return (
     <div className="App font-commissioner flex flex-col items-center bg-background-white min-h-screen relative">
@@ -20,12 +21,14 @@ function App() {
         pledgeAmount={pledgeAmount}
         title={data.title}
         pledges={data.pledges}
+        toggle={toggle}
       ></BackProjectModal>
       <Nav></Nav>
       <div className="flex flex-col max-w-3xl gap-y-6 z-10 mt-56">
         <ProductDescription
           title={data.title}
           pitch={data.pitch}
+          toggle={toggle}
         ></ProductDescription>
         <BackingInfo
           backed={backed}
@@ -33,7 +36,11 @@ function App() {
           daysLeft={data.daysLeft}
           goal={data.goal}
         ></BackingInfo>
-        <About about={data.about} pledges={data.pledges}></About>
+        <About
+          about={data.about}
+          pledges={data.pledges}
+          toggle={toggle}
+        ></About>
       </div>
     </div>
   );

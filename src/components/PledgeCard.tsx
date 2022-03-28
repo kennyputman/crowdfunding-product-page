@@ -3,6 +3,7 @@ import { Pledge } from "../types/PropTypes";
 
 type PledgeCardProps = {
   pledge: Pledge;
+  toggle: () => void;
 };
 
 export const PledgeCard = (props: PledgeCardProps) => {
@@ -20,7 +21,10 @@ export const PledgeCard = (props: PledgeCardProps) => {
           {props.pledge.left}
           <span className="font-normal text-sm pl-2 text-dark-gray">left</span>
         </p>
-        <button className="bg-moderate-cyan hover:bg-dark-cyan btn-base">
+        <button
+          className="bg-moderate-cyan hover:bg-dark-cyan btn-base"
+          onClick={props.toggle}
+        >
           Select Reward
         </button>
       </div>

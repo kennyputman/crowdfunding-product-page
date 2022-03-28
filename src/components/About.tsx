@@ -5,6 +5,7 @@ import { PledgeCard } from "./PledgeCard";
 type AboutProps = {
   about: string[];
   pledges: Pledge[];
+  toggle: () => void;
 };
 
 const About = (props: AboutProps) => {
@@ -20,7 +21,7 @@ const About = (props: AboutProps) => {
       })}
 
       {props.pledges.map((pledge) => (
-        <PledgeCard pledge={pledge}></PledgeCard>
+        <PledgeCard pledge={pledge} toggle={props.toggle}></PledgeCard>
       ))}
     </section>
   );
