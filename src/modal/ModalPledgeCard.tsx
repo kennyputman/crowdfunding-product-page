@@ -25,11 +25,6 @@ export const ModalPledgeCard = (props: PledgeCardProps) => {
         </p>
       </div>
       <p className="pb-6 text-dark-gray">{props.pledge.description}</p>
-      <div className="flex flex-row justify-between">
-        {/* <button className="bg-moderate-cyan hover:bg-dark-cyan btn-base">
-          Select Reward
-        </button> */}
-      </div>
     </section>
   );
 };
