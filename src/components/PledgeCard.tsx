@@ -7,7 +7,11 @@ type PledgeCardProps = {
 };
 
 export const PledgeCard = (props: PledgeCardProps) => {
-  const filled = props.pledge.left === 0 ? { opacity: 0.4 } : {};
+  const filledStyle = {
+    opacity: 0.4,
+    boxShadow: "3px 3px 5px #b1b1b1, -3px 0 5px #b1b1b1",
+  };
+  const filled = props.pledge.left === 0 ? filledStyle : {};
 
   const InStockButton = () => {
     return (

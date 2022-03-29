@@ -41,7 +41,6 @@ const BackProjectModal = (props: ProjectModalProps) =>
               <p className="mb-8 text-dark-gray">
                 Want to support us in brining {props.title} out in this world?
               </p>
-
               {props.pledges.map((pledge) => (
                 <ModalPledgeCard pledge={pledge}></ModalPledgeCard>
               ))}
