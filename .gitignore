@@ -24,3 +24,6 @@ yarn-error.log*
 
 #frontend mentor specs
 /specs
+
+# Local Netlify folder
+.netlify
