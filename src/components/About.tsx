@@ -11,10 +11,10 @@ type AboutProps = {
 const About = (props: AboutProps) => {
   return (
     <section className="max-w-3xl bg-white rounded-md p-12 mb-32">
-      <h2 className="pb-4">About this project</h2>
+      <h2 className="pb-4 font-bold text-xl">About this project</h2>
       {props.about.map((item, index) => {
         return (
-          <p className="pb-4" key={index}>
+          <p className="pb-8 text-dark-gray" key={index}>
             {item}
           </p>
         );
